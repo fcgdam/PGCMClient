@@ -1,0 +1,61 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/pref_header_general"
+        android:key="pref_server_settings">
+
+        <EditTextPreference
+            android:key="pref_gcmkey"
+            android:title="GCM Project Key"
+            android:defaultValue="0"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:maxLines="1" />
+
+        <CheckBoxPreference
+            android:key="pref_backendenabled"
+            android:title="@string/pref_backendenabled"
+            android:defaultValue="true" />
+
+        <EditTextPreference
+            android:dependency="pref_backendenabled"
+            android:key="pref_server"
+            android:title="Backend Server"
+            android:defaultValue="192.168.1.16"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:maxLines="1" />
+
+        <EditTextPreference
+            android:dependency="pref_backendenabled"
+            android:key="pref_port"
+            android:title="Backend Server Port"
+            android:defaultValue="1880"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:maxLines="1" />
+
+        <EditTextPreference
+            android:dependency="pref_backendenabled"
+            android:key="pref_baseurl"
+            android:title="Backend Server Base URL"
+            android:defaultValue="/api/v1"
+            android:inputType="text"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:maxLines="1" />
+
+        <EditTextPreference
+            android:dependency="pref_backendenabled"
+            android:key="pref_deviceid"
+            android:title="Random device ID"
+            android:defaultValue="00"
+            android:inputType="text"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:maxLines="1" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
